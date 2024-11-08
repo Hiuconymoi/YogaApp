@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/titleTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="New Class Instance"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/imgCancelAddClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Delete"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <View
+            android:id="@+id/viewHLine"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/titleTask"
+            android:background="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewHLine"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course: "
+                    android:textSize="20dp"
+                    />
+                <Spinner
+                    android:id="@+id/spinerCourseName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_class_course_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DayOfWeek: "
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/edtDate_of_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:hint="Date: (yyyy-MM-dd)"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher: "
+                    android:textSize="20dp"
+                    />
+                <Spinner
+                    android:id="@+id/spinerTeacher_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edtAdditional_comment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:hint="Additional comments"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/btnAddClassInstance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:text="Add Task"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

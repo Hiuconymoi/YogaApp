@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeRefreshLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".HomepageActivity" >
+
+        <LinearLayout
+            android:id="@+id/home_page_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue600"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/aclonica"
+                android:text="Yoga APP"
+                android:paddingLeft="70dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/iconsearch" />
+        </LinearLayout>
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/editTextText"-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:drawableLeft="@drawable/iconsearch"-->
+        <!--            android:drawablePadding="@dimen/size20dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Enter something to find ...."-->
+        <!--            android:inputType="text"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.497"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+        <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <FrameLayout
+            android:id="@+id/frame_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/navigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.69"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_page_header"
+            app:layout_constraintVertical_bias="1.0">
+
+        </FrameLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/iconhome" />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="130dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/iconadd" />
+
+            <ImageView
+                android:id="@+id/imgYogaClass"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="220dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/iconyogaclass" />
+
+            <ImageView
+                android:id="@+id/imgAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="310dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/iconuser" />
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
